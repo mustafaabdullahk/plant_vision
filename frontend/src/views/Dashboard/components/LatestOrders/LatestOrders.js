@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import clsx from 'clsx';
 import moment from 'moment';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -51,10 +52,10 @@ const statusColors = {
 };
 
 const LatestOrders = props => {
+  
   const { className, ...rest } = props;
 
   const classes = useStyles();
-
   const [orders] = useState(mockData);
 
   return (
@@ -81,8 +82,8 @@ const LatestOrders = props => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Order Ref</TableCell>
-                  <TableCell>Customer</TableCell>
+                <TableCell>Order Ref</TableCell>
+      <TableCell>Customer </TableCell>
                   <TableCell sortDirection="desc">
                     <Tooltip
                       enterDelay={300}

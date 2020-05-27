@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Articles from '../components/Article';
 
 class ArticleList extends React.Component
 {
@@ -19,10 +18,6 @@ class ArticleList extends React.Component
                     })
                 console.log(res.data);
             })
-    }
-    render()
-    {
-        return(<Articles />)
     }
 }
 
